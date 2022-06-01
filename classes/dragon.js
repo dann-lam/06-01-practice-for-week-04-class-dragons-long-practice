@@ -7,7 +7,9 @@ class Dragon {
   breathesFire() {
     return `${this.name} breathes fire everywhere! BURN!!!!`
   }
-
+  bruh(){
+    console.log('lol bruh')
+  }
   static getDragons(...dragonsInput) {
     let dragonArray = [];
     console.log(dragonsInput)
