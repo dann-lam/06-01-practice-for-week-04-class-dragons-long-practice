@@ -17,7 +17,7 @@ const fileContainsClassResult = fileContainsClass(
 describe("The classes/friendly-dragon.js module file", () => {
   it("does not export null or undefined", () => {
     expect(FriendlyDragon).to.not.be.null;
-    expect(FriendlyDragon).to.not.deep.equal(undefined);
+    expect(FriendlyDragon).to.not.deep.equal(undefined);  
   });
 
   if (FriendlyDragon !== null) {
@@ -90,12 +90,12 @@ describe("FriendlyDragon class", () => {
     beforeEach(() => {
       sinon.stub(console, "log");
     });
-  
+
     afterEach(() => {
       console.log.restore();
     });
-  
-  
+
+
     it("logs each life goal to the console", () => {
       const instance = new FriendlyDragon(
         "Puff",
@@ -107,9 +107,9 @@ describe("FriendlyDragon class", () => {
         ],
         "Jackie Paper"
       );
-  
+
       instance.hasLifeGoals();
-  
+
       expect(console.log.calledThrice).to.be.true;
       expect(console.log.calledWith("Puff likes to live by the sea")).to.be
         .true;
